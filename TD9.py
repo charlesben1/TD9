@@ -10,8 +10,8 @@ import hashlib
 
 
 binance_keys = {
-    'api_key': "PASTE API KEY HERE",
-    'secret_key': "PASTE SECTRET KEY HERE"
+    'api_key': "api key",
+    'secret_key': "secret key"
 }
 
 class Binance:
@@ -46,7 +46,7 @@ class Binance:
 
         for pair in data['symbols']:
             if pair['status'] == 'TRADING':
-                if quoteAssets != None and pair['quoteAsset'] in quoteAssets:  #I would skip BNB here.
+                if quoteAssets != None and pair['quoteAsset'] in quoteAssets:
                     symbols_list.append(pair['symbol'])
 
         return(symbols_list)
